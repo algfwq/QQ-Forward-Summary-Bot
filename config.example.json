@@ -1,0 +1,26 @@
+{
+  "server": {
+    "listen": ":8080",
+    "ws_path": "/ws",
+    "access_token": "",
+    "read_header_timeout_seconds": 10
+  },
+  "log": {
+    "dir": "logs",
+    "file_prefix": "qq-summary-bot"
+  },
+  "openai": {
+    "base_url": "",
+    "api_key": "",
+    "model": "gemini-3.1-flash-lite-preview",
+    "request_timeout_seconds": 60,
+    "temperature": 0.2,
+    "system_prompt": "你是一个负责整理 QQ 聊天记录的助手。请基于给出的聊天记录用中文输出准确、克制的总结，不要编造未出现的信息。优先提炼主题、结论、待办、时间地点人物，以及仍未解决的问题。若内容杂乱，请分段总结。总长度控制在 400 字以内。"
+  },
+  "bot": {
+    "process_timeout_seconds": 120,
+    "max_forward_depth": 8,
+    "summary_input_limit": 12000,
+    "max_images": 12
+  }
+}
